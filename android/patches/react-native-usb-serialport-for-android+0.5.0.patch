@@ -1,0 +1,385 @@
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build.gradle b/node_modules/react-native-usb-serialport-for-android/android/build.gradle
+index da7756d..d77df86 100644
+--- a/node_modules/react-native-usb-serialport-for-android/android/build.gradle
++++ b/node_modules/react-native-usb-serialport-for-android/android/build.gradle
+@@ -57,5 +57,5 @@ repositories {
+ dependencies {
+     //noinspection GradleDynamicVersion
+     implementation "com.facebook.react:react-native:+"  // From node_modules
+-    implementation "com.github.mik3y:usb-serial-for-android:3.4.3"
++    implementation "com.github.mik3y:usb-serial-for-android:3.7.3"
+ }
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/c97e79c96e68888bc17bb2d9aa8fdcca/results.bin b/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/c97e79c96e68888bc17bb2d9aa8fdcca/results.bin
+new file mode 100644
+index 0000000..0d259dd
+--- /dev/null
++++ b/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/c97e79c96e68888bc17bb2d9aa8fdcca/results.bin
+@@ -0,0 +1 @@
++o/classes
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/c97e79c96e68888bc17bb2d9aa8fdcca/transformed/classes/classes_dex/classes.dex b/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/c97e79c96e68888bc17bb2d9aa8fdcca/transformed/classes/classes_dex/classes.dex
+new file mode 100644
+index 0000000..b5dbf1d
+Binary files /dev/null and b/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/c97e79c96e68888bc17bb2d9aa8fdcca/transformed/classes/classes_dex/classes.dex differ
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/d5f7cf0095ca52774b08a001308427e2/results.bin b/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/d5f7cf0095ca52774b08a001308427e2/results.bin
+new file mode 100644
+index 0000000..7ed749e
+--- /dev/null
++++ b/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/d5f7cf0095ca52774b08a001308427e2/results.bin
+@@ -0,0 +1 @@
++o/bundleLibRuntimeToDirDebug
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/d5f7cf0095ca52774b08a001308427e2/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/bastengao/usbserialport/BuildConfig.dex b/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/d5f7cf0095ca52774b08a001308427e2/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/bastengao/usbserialport/BuildConfig.dex
+new file mode 100644
+index 0000000..7872e30
+Binary files /dev/null and b/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/d5f7cf0095ca52774b08a001308427e2/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/bastengao/usbserialport/BuildConfig.dex differ
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/d5f7cf0095ca52774b08a001308427e2/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/bastengao/usbserialport/EventSender.dex b/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/d5f7cf0095ca52774b08a001308427e2/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/bastengao/usbserialport/EventSender.dex
+new file mode 100644
+index 0000000..23fa243
+Binary files /dev/null and b/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/d5f7cf0095ca52774b08a001308427e2/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/bastengao/usbserialport/EventSender.dex differ
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/d5f7cf0095ca52774b08a001308427e2/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/bastengao/usbserialport/UsbSerialPortWrapper.dex b/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/d5f7cf0095ca52774b08a001308427e2/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/bastengao/usbserialport/UsbSerialPortWrapper.dex
+new file mode 100644
+index 0000000..891b922
+Binary files /dev/null and b/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/d5f7cf0095ca52774b08a001308427e2/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/bastengao/usbserialport/UsbSerialPortWrapper.dex differ
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/d5f7cf0095ca52774b08a001308427e2/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/bastengao/usbserialport/UsbSerialportForAndroidModule$1.dex b/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/d5f7cf0095ca52774b08a001308427e2/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/bastengao/usbserialport/UsbSerialportForAndroidModule$1.dex
+new file mode 100644
+index 0000000..f21e459
+Binary files /dev/null and b/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/d5f7cf0095ca52774b08a001308427e2/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/bastengao/usbserialport/UsbSerialportForAndroidModule$1.dex differ
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/d5f7cf0095ca52774b08a001308427e2/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/bastengao/usbserialport/UsbSerialportForAndroidModule.dex b/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/d5f7cf0095ca52774b08a001308427e2/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/bastengao/usbserialport/UsbSerialportForAndroidModule.dex
+new file mode 100644
+index 0000000..89e8d7c
+Binary files /dev/null and b/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/d5f7cf0095ca52774b08a001308427e2/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/bastengao/usbserialport/UsbSerialportForAndroidModule.dex differ
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/d5f7cf0095ca52774b08a001308427e2/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/bastengao/usbserialport/UsbSerialportForAndroidPackage.dex b/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/d5f7cf0095ca52774b08a001308427e2/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/bastengao/usbserialport/UsbSerialportForAndroidPackage.dex
+new file mode 100644
+index 0000000..05a892a
+Binary files /dev/null and b/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/d5f7cf0095ca52774b08a001308427e2/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/bastengao/usbserialport/UsbSerialportForAndroidPackage.dex differ
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/d5f7cf0095ca52774b08a001308427e2/transformed/bundleLibRuntimeToDirDebug/desugar_graph.bin b/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/d5f7cf0095ca52774b08a001308427e2/transformed/bundleLibRuntimeToDirDebug/desugar_graph.bin
+new file mode 100644
+index 0000000..5dbd36b
+Binary files /dev/null and b/node_modules/react-native-usb-serialport-for-android/android/build/.transforms/d5f7cf0095ca52774b08a001308427e2/transformed/bundleLibRuntimeToDirDebug/desugar_graph.bin differ
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/generated/source/buildConfig/debug/com/bastengao/usbserialport/BuildConfig.java b/node_modules/react-native-usb-serialport-for-android/android/build/generated/source/buildConfig/debug/com/bastengao/usbserialport/BuildConfig.java
+new file mode 100644
+index 0000000..4ece98a
+--- /dev/null
++++ b/node_modules/react-native-usb-serialport-for-android/android/build/generated/source/buildConfig/debug/com/bastengao/usbserialport/BuildConfig.java
+@@ -0,0 +1,10 @@
++/**
++ * Automatically generated file. DO NOT MODIFY
++ */
++package com.bastengao.usbserialport;
++
++public final class BuildConfig {
++  public static final boolean DEBUG = Boolean.parseBoolean("true");
++  public static final String LIBRARY_PACKAGE_NAME = "com.bastengao.usbserialport";
++  public static final String BUILD_TYPE = "debug";
++}
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/AndroidManifest.xml b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/AndroidManifest.xml
+new file mode 100644
+index 0000000..7bae1cb
+--- /dev/null
++++ b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/AndroidManifest.xml
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="com.bastengao.usbserialport" >
++
++    <uses-sdk android:minSdkVersion="16" />
++
++    <uses-feature android:name="android.hardware.usb.host" />
++
++</manifest>
+\ No newline at end of file
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/output-metadata.json b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/output-metadata.json
+new file mode 100644
+index 0000000..488d96a
+--- /dev/null
++++ b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/output-metadata.json
+@@ -0,0 +1,18 @@
++{
++  "version": 3,
++  "artifactType": {
++    "type": "AAPT_FRIENDLY_MERGED_MANIFESTS",
++    "kind": "Directory"
++  },
++  "applicationId": "com.bastengao.usbserialport",
++  "variantName": "debug",
++  "elements": [
++    {
++      "type": "SINGLE",
++      "filters": [],
++      "attributes": [],
++      "outputFile": "AndroidManifest.xml"
++    }
++  ],
++  "elementType": "File"
++}
+\ No newline at end of file
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/aar_metadata/debug/writeDebugAarMetadata/aar-metadata.properties b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/aar_metadata/debug/writeDebugAarMetadata/aar-metadata.properties
+new file mode 100644
+index 0000000..1211b1e
+--- /dev/null
++++ b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/aar_metadata/debug/writeDebugAarMetadata/aar-metadata.properties
+@@ -0,0 +1,6 @@
++aarFormatVersion=1.0
++aarMetadataVersion=1.0
++minCompileSdk=1
++minCompileSdkExtension=0
++minAndroidGradlePluginVersion=1.0.0
++coreLibraryDesugaringEnabled=false
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/annotation_processor_list/debug/javaPreCompileDebug/annotationProcessors.json b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/annotation_processor_list/debug/javaPreCompileDebug/annotationProcessors.json
+new file mode 100644
+index 0000000..9e26dfe
+--- /dev/null
++++ b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/annotation_processor_list/debug/javaPreCompileDebug/annotationProcessors.json
+@@ -0,0 +1 @@
++{}
+\ No newline at end of file
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/compile_library_classes_jar/debug/bundleLibCompileToJarDebug/classes.jar b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/compile_library_classes_jar/debug/bundleLibCompileToJarDebug/classes.jar
+new file mode 100644
+index 0000000..42a92b7
+Binary files /dev/null and b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/compile_library_classes_jar/debug/bundleLibCompileToJarDebug/classes.jar differ
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/compile_r_class_jar/debug/generateDebugRFile/R.jar b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/compile_r_class_jar/debug/generateDebugRFile/R.jar
+new file mode 100644
+index 0000000..a522797
+Binary files /dev/null and b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/compile_r_class_jar/debug/generateDebugRFile/R.jar differ
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/compile_symbol_list/debug/generateDebugRFile/R.txt b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/compile_symbol_list/debug/generateDebugRFile/R.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties
+new file mode 100644
+index 0000000..90da5bc
+--- /dev/null
++++ b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties
+@@ -0,0 +1 @@
++#Wed Jun 03 00:12:08 CEST 2026
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/incremental/debug/packageDebugResources/merger.xml b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/incremental/debug/packageDebugResources/merger.xml
+new file mode 100644
+index 0000000..6ab8233
+--- /dev/null
++++ b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/incremental/debug/packageDebugResources/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/tfeillant/workdir/CarDashboard/node_modules/react-native-usb-serialport-for-android/android/src/main/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main" generated-set="main$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/tfeillant/workdir/CarDashboard/node_modules/react-native-usb-serialport-for-android/android/src/main/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/tfeillant/workdir/CarDashboard/node_modules/react-native-usb-serialport-for-android/android/src/debug/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/tfeillant/workdir/CarDashboard/node_modules/react-native-usb-serialport-for-android/android/src/debug/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/tfeillant/workdir/CarDashboard/node_modules/react-native-usb-serialport-for-android/android/build/generated/res/resValues/debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated" generated-set="generated$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/tfeillant/workdir/CarDashboard/node_modules/react-native-usb-serialport-for-android/android/build/generated/res/resValues/debug"/></dataSet><mergedItems/></merger>
+\ No newline at end of file
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/incremental/mergeDebugAssets/merger.xml b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/incremental/mergeDebugAssets/merger.xml
+new file mode 100644
+index 0000000..90dd00b
+--- /dev/null
++++ b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/incremental/mergeDebugAssets/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/tfeillant/workdir/CarDashboard/node_modules/react-native-usb-serialport-for-android/android/src/main/assets"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/tfeillant/workdir/CarDashboard/node_modules/react-native-usb-serialport-for-android/android/src/debug/assets"/></dataSet><dataSet config="generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/tfeillant/workdir/CarDashboard/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/shader_assets/debug/compileDebugShaders/out"/></dataSet></merger>
+\ No newline at end of file
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml
+new file mode 100644
+index 0000000..dfa9768
+--- /dev/null
++++ b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/tfeillant/workdir/CarDashboard/node_modules/react-native-usb-serialport-for-android/android/src/main/jniLibs"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/tfeillant/workdir/CarDashboard/node_modules/react-native-usb-serialport-for-android/android/src/debug/jniLibs"/></dataSet></merger>
+\ No newline at end of file
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/incremental/mergeDebugShaders/merger.xml b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/incremental/mergeDebugShaders/merger.xml
+new file mode 100644
+index 0000000..338dd12
+--- /dev/null
++++ b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/incremental/mergeDebugShaders/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/tfeillant/workdir/CarDashboard/node_modules/react-native-usb-serialport-for-android/android/src/main/shaders"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/tfeillant/workdir/CarDashboard/node_modules/react-native-usb-serialport-for-android/android/src/debug/shaders"/></dataSet></merger>
+\ No newline at end of file
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/bastengao/usbserialport/BuildConfig.class b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/bastengao/usbserialport/BuildConfig.class
+new file mode 100644
+index 0000000..de8a391
+Binary files /dev/null and b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/bastengao/usbserialport/BuildConfig.class differ
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/bastengao/usbserialport/EventSender.class b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/bastengao/usbserialport/EventSender.class
+new file mode 100644
+index 0000000..93254e7
+Binary files /dev/null and b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/bastengao/usbserialport/EventSender.class differ
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/bastengao/usbserialport/UsbSerialPortWrapper.class b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/bastengao/usbserialport/UsbSerialPortWrapper.class
+new file mode 100644
+index 0000000..580369a
+Binary files /dev/null and b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/bastengao/usbserialport/UsbSerialPortWrapper.class differ
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/bastengao/usbserialport/UsbSerialportForAndroidModule$1.class b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/bastengao/usbserialport/UsbSerialportForAndroidModule$1.class
+new file mode 100644
+index 0000000..62a2059
+Binary files /dev/null and b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/bastengao/usbserialport/UsbSerialportForAndroidModule$1.class differ
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/bastengao/usbserialport/UsbSerialportForAndroidModule.class b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/bastengao/usbserialport/UsbSerialportForAndroidModule.class
+new file mode 100644
+index 0000000..263cde7
+Binary files /dev/null and b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/bastengao/usbserialport/UsbSerialportForAndroidModule.class differ
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/bastengao/usbserialport/UsbSerialportForAndroidPackage.class b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/bastengao/usbserialport/UsbSerialportForAndroidPackage.class
+new file mode 100644
+index 0000000..a6cab52
+Binary files /dev/null and b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/bastengao/usbserialport/UsbSerialportForAndroidPackage.class differ
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/local_only_symbol_list/debug/parseDebugLocalResources/R-def.txt b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/local_only_symbol_list/debug/parseDebugLocalResources/R-def.txt
+new file mode 100644
+index 0000000..78ac5b8
+--- /dev/null
++++ b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/local_only_symbol_list/debug/parseDebugLocalResources/R-def.txt
+@@ -0,0 +1,2 @@
++R_DEF: Internal format may change without notice
++local
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/manifest_merge_blame_file/debug/processDebugManifest/manifest-merger-blame-debug-report.txt b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/manifest_merge_blame_file/debug/processDebugManifest/manifest-merger-blame-debug-report.txt
+new file mode 100644
+index 0000000..14296e3
+--- /dev/null
++++ b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/manifest_merge_blame_file/debug/processDebugManifest/manifest-merger-blame-debug-report.txt
+@@ -0,0 +1,11 @@
++1<?xml version="1.0" encoding="utf-8"?>
++2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++3    package="com.bastengao.usbserialport" >
++4
++5    <uses-sdk android:minSdkVersion="16" />
++6
++7    <uses-feature android:name="android.hardware.usb.host" />
++7-->/Users/tfeillant/workdir/CarDashboard/node_modules/react-native-usb-serialport-for-android/android/src/main/AndroidManifest.xml:3:5-62
++7-->/Users/tfeillant/workdir/CarDashboard/node_modules/react-native-usb-serialport-for-android/android/src/main/AndroidManifest.xml:3:19-59
++8
++9</manifest>
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml
+new file mode 100644
+index 0000000..7bae1cb
+--- /dev/null
++++ b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="com.bastengao.usbserialport" >
++
++    <uses-sdk android:minSdkVersion="16" />
++
++    <uses-feature android:name="android.hardware.usb.host" />
++
++</manifest>
+\ No newline at end of file
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/navigation_json/debug/extractDeepLinksDebug/navigation.json b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/navigation_json/debug/extractDeepLinksDebug/navigation.json
+new file mode 100644
+index 0000000..0637a08
+--- /dev/null
++++ b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/navigation_json/debug/extractDeepLinksDebug/navigation.json
+@@ -0,0 +1 @@
++[]
+\ No newline at end of file
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/nested_resources_validation_report/debug/generateDebugResources/nestedResourcesValidationReport.txt b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/nested_resources_validation_report/debug/generateDebugResources/nestedResourcesValidationReport.txt
+new file mode 100644
+index 0000000..08f4ebe
+--- /dev/null
++++ b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/nested_resources_validation_report/debug/generateDebugResources/nestedResourcesValidationReport.txt
+@@ -0,0 +1 @@
++0 Warning/Error
+\ No newline at end of file
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/bastengao/usbserialport/BuildConfig.class b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/bastengao/usbserialport/BuildConfig.class
+new file mode 100644
+index 0000000..de8a391
+Binary files /dev/null and b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/bastengao/usbserialport/BuildConfig.class differ
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/bastengao/usbserialport/EventSender.class b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/bastengao/usbserialport/EventSender.class
+new file mode 100644
+index 0000000..93254e7
+Binary files /dev/null and b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/bastengao/usbserialport/EventSender.class differ
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/bastengao/usbserialport/UsbSerialPortWrapper.class b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/bastengao/usbserialport/UsbSerialPortWrapper.class
+new file mode 100644
+index 0000000..580369a
+Binary files /dev/null and b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/bastengao/usbserialport/UsbSerialPortWrapper.class differ
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/bastengao/usbserialport/UsbSerialportForAndroidModule$1.class b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/bastengao/usbserialport/UsbSerialportForAndroidModule$1.class
+new file mode 100644
+index 0000000..62a2059
+Binary files /dev/null and b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/bastengao/usbserialport/UsbSerialportForAndroidModule$1.class differ
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/bastengao/usbserialport/UsbSerialportForAndroidModule.class b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/bastengao/usbserialport/UsbSerialportForAndroidModule.class
+new file mode 100644
+index 0000000..263cde7
+Binary files /dev/null and b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/bastengao/usbserialport/UsbSerialportForAndroidModule.class differ
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/bastengao/usbserialport/UsbSerialportForAndroidPackage.class b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/bastengao/usbserialport/UsbSerialportForAndroidPackage.class
+new file mode 100644
+index 0000000..a6cab52
+Binary files /dev/null and b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/bastengao/usbserialport/UsbSerialportForAndroidPackage.class differ
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/runtime_library_classes_jar/debug/bundleLibRuntimeToJarDebug/classes.jar b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/runtime_library_classes_jar/debug/bundleLibRuntimeToJarDebug/classes.jar
+new file mode 100644
+index 0000000..8b679f5
+Binary files /dev/null and b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/runtime_library_classes_jar/debug/bundleLibRuntimeToJarDebug/classes.jar differ
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/symbol_list_with_package_name/debug/generateDebugRFile/package-aware-r.txt b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/symbol_list_with_package_name/debug/generateDebugRFile/package-aware-r.txt
+new file mode 100644
+index 0000000..3c797ef
+--- /dev/null
++++ b/node_modules/react-native-usb-serialport-for-android/android/build/intermediates/symbol_list_with_package_name/debug/generateDebugRFile/package-aware-r.txt
+@@ -0,0 +1 @@
++com.bastengao.usbserialport
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/outputs/logs/manifest-merger-debug-report.txt b/node_modules/react-native-usb-serialport-for-android/android/build/outputs/logs/manifest-merger-debug-report.txt
+new file mode 100644
+index 0000000..52f5f5b
+--- /dev/null
++++ b/node_modules/react-native-usb-serialport-for-android/android/build/outputs/logs/manifest-merger-debug-report.txt
+@@ -0,0 +1,21 @@
++-- Merging decision tree log ---
++manifest
++ADDED from /Users/tfeillant/workdir/CarDashboard/node_modules/react-native-usb-serialport-for-android/android/src/main/AndroidManifest.xml:1:1-4:12
++INJECTED from /Users/tfeillant/workdir/CarDashboard/node_modules/react-native-usb-serialport-for-android/android/src/main/AndroidManifest.xml:1:1-4:12
++	package
++		ADDED from /Users/tfeillant/workdir/CarDashboard/node_modules/react-native-usb-serialport-for-android/android/src/main/AndroidManifest.xml:2:11-48
++		INJECTED from /Users/tfeillant/workdir/CarDashboard/node_modules/react-native-usb-serialport-for-android/android/src/main/AndroidManifest.xml
++	xmlns:android
++		ADDED from /Users/tfeillant/workdir/CarDashboard/node_modules/react-native-usb-serialport-for-android/android/src/main/AndroidManifest.xml:1:11-69
++uses-feature#android.hardware.usb.host
++ADDED from /Users/tfeillant/workdir/CarDashboard/node_modules/react-native-usb-serialport-for-android/android/src/main/AndroidManifest.xml:3:5-62
++	android:name
++		ADDED from /Users/tfeillant/workdir/CarDashboard/node_modules/react-native-usb-serialport-for-android/android/src/main/AndroidManifest.xml:3:19-59
++uses-sdk
++INJECTED from /Users/tfeillant/workdir/CarDashboard/node_modules/react-native-usb-serialport-for-android/android/src/main/AndroidManifest.xml reason: use-sdk injection requested
++INJECTED from /Users/tfeillant/workdir/CarDashboard/node_modules/react-native-usb-serialport-for-android/android/src/main/AndroidManifest.xml
++INJECTED from /Users/tfeillant/workdir/CarDashboard/node_modules/react-native-usb-serialport-for-android/android/src/main/AndroidManifest.xml
++	android:targetSdkVersion
++		INJECTED from /Users/tfeillant/workdir/CarDashboard/node_modules/react-native-usb-serialport-for-android/android/src/main/AndroidManifest.xml
++	android:minSdkVersion
++		INJECTED from /Users/tfeillant/workdir/CarDashboard/node_modules/react-native-usb-serialport-for-android/android/src/main/AndroidManifest.xml
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/UsbSerialPortWrapper.class.uniqueId2 b/node_modules/react-native-usb-serialport-for-android/android/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/UsbSerialPortWrapper.class.uniqueId2
+new file mode 100644
+index 0000000..580369a
+Binary files /dev/null and b/node_modules/react-native-usb-serialport-for-android/android/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/UsbSerialPortWrapper.class.uniqueId2 differ
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/UsbSerialportForAndroidModule$1.class.uniqueId3 b/node_modules/react-native-usb-serialport-for-android/android/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/UsbSerialportForAndroidModule$1.class.uniqueId3
+new file mode 100644
+index 0000000..2bc4d73
+Binary files /dev/null and b/node_modules/react-native-usb-serialport-for-android/android/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/UsbSerialportForAndroidModule$1.class.uniqueId3 differ
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/UsbSerialportForAndroidModule.class.uniqueId0 b/node_modules/react-native-usb-serialport-for-android/android/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/UsbSerialportForAndroidModule.class.uniqueId0
+new file mode 100644
+index 0000000..ae09a28
+Binary files /dev/null and b/node_modules/react-native-usb-serialport-for-android/android/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/UsbSerialportForAndroidModule.class.uniqueId0 differ
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/UsbSerialportForAndroidPackage.class.uniqueId1 b/node_modules/react-native-usb-serialport-for-android/android/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/UsbSerialportForAndroidPackage.class.uniqueId1
+new file mode 100644
+index 0000000..a6cab52
+Binary files /dev/null and b/node_modules/react-native-usb-serialport-for-android/android/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/UsbSerialportForAndroidPackage.class.uniqueId1 differ
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin b/node_modules/react-native-usb-serialport-for-android/android/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin
+new file mode 100644
+index 0000000..65c5d0d
+Binary files /dev/null and b/node_modules/react-native-usb-serialport-for-android/android/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin differ
+diff --git a/node_modules/react-native-usb-serialport-for-android/android/src/main/java/com/bastengao/usbserialport/UsbSerialportForAndroidModule.java b/node_modules/react-native-usb-serialport-for-android/android/src/main/java/com/bastengao/usbserialport/UsbSerialportForAndroidModule.java
+index 7e20282..0273ed5 100644
+--- a/node_modules/react-native-usb-serialport-for-android/android/src/main/java/com/bastengao/usbserialport/UsbSerialportForAndroidModule.java
++++ b/node_modules/react-native-usb-serialport-for-android/android/src/main/java/com/bastengao/usbserialport/UsbSerialportForAndroidModule.java
+@@ -18,6 +18,9 @@ import com.facebook.react.bridge.WritableArray;
+ import com.facebook.react.bridge.WritableMap;
+ import com.facebook.react.module.annotations.ReactModule;
+ import com.facebook.react.modules.core.DeviceEventManagerModule;
++import com.hoho.android.usbserial.driver.CdcAcmSerialDriver;
++import com.hoho.android.usbserial.driver.Ch34xSerialDriver;
++import com.hoho.android.usbserial.driver.ProbeTable;
+ import com.hoho.android.usbserial.driver.UsbSerialDriver;
+ import com.hoho.android.usbserial.driver.UsbSerialPort;
+ import com.hoho.android.usbserial.driver.UsbSerialProber;
+@@ -129,7 +132,9 @@ public class UsbSerialportForAndroidModule extends ReactContextBaseJavaModule im
+             return;
+         }
+ 
+-        UsbSerialDriver driver = UsbSerialProber.getDefaultProber().probeDevice(device);
++        ProbeTable customTable = UsbSerialProber.getDefaultProbeTable();
++        customTable.addProduct(0x1A86, 0x55D4, CdcAcmSerialDriver.class); // CH9102F (CDC ACM)
++        UsbSerialDriver driver = new UsbSerialProber(customTable).probeDevice(device);
+         if (driver == null) {
+             promise.reject(CODE_DRIVER_NOT_FOND, "no driver for device");
+             return;
+@@ -157,7 +162,7 @@ public class UsbSerialportForAndroidModule extends ReactContextBaseJavaModule im
+             try {
+                  port.close();
+             } catch (IOException ignored) {}
+-            promise.reject(CODE_OPEN_FAILED, "connection failed", e);
++            promise.reject(CODE_OPEN_FAILED, "connection failed: " + e.getMessage(), e);
+             return;
+         }
+ 

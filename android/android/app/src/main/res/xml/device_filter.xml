@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- CH9102F (LILYGO T-CAN485) VID=0x1A86 PID=0x55D4 -->
+    <usb-device vendor-id="6790" product-id="21972" />
+</resources>
