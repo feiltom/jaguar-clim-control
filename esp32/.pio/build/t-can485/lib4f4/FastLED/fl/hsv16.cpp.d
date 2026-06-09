@@ -1,0 +1,30 @@
+.pio/build/t-can485/lib4f4/FastLED/fl/hsv16.cpp.o: \
+ .pio/libdeps/t-can485/FastLED/src/fl/hsv16.cpp \
+ .pio/libdeps/t-can485/FastLED/src/fl/hsv16.h \
+ .pio/libdeps/t-can485/FastLED/src/fl/stdint.h \
+ .pio/libdeps/t-can485/FastLED/src/fl/int.h \
+ .pio/libdeps/t-can485/FastLED/src/platforms/int.h \
+ .pio/libdeps/t-can485/FastLED/src/platforms/arm/is_arm.h \
+ .pio/libdeps/t-can485/FastLED/src/platforms/esp/int.h \
+ .pio/libdeps/t-can485/FastLED/src/crgb.h \
+ .pio/libdeps/t-can485/FastLED/src/chsv.h \
+ .pio/libdeps/t-can485/FastLED/src/fl/hsv.h \
+ .pio/libdeps/t-can485/FastLED/src/fl/namespace.h \
+ .pio/libdeps/t-can485/FastLED/src/color.h \
+ .pio/libdeps/t-can485/FastLED/src/lib8tion/types.h \
+ .pio/libdeps/t-can485/FastLED/src/fl/force_inline.h \
+ .pio/libdeps/t-can485/FastLED/src/fl/type_traits.h \
+ .pio/libdeps/t-can485/FastLED/src/fl/move.h \
+ .pio/libdeps/t-can485/FastLED/src/hsv2rgb.h \
+ .pio/libdeps/t-can485/FastLED/src/fl/ease.h \
+ .pio/libdeps/t-can485/FastLED/src/fastled_progmem.h \
+ .pio/libdeps/t-can485/FastLED/src/platforms/null_progmem.h \
+ .pio/libdeps/t-can485/FastLED/src/fl/math.h \
+ .pio/libdeps/t-can485/FastLED/src/fl/has_include.h \
+ .pio/libdeps/t-can485/FastLED/src/fl/clamp.h \
+ .pio/libdeps/t-can485/FastLED/src/fl/map_range.h \
+ .pio/libdeps/t-can485/FastLED/src/fl/math_macros.h \
+ .pio/libdeps/t-can485/FastLED/src/fl/compiler_control.h \
+ .pio/libdeps/t-can485/FastLED/src/fl/geometry.h \
+ .pio/libdeps/t-can485/FastLED/src/lib8tion/intmap.h \
+ .pio/libdeps/t-can485/FastLED/src/lib8tion/lib8static.h
