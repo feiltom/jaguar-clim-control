@@ -14,8 +14,8 @@ import { useDashboardStore } from '@/store';
 export function DashboardScreen() {
   const [serialVisible, setSerialVisible] = useState(false);
   const {
-    tempDriver, tempPassenger, fanLevel, isAuto, isMaxAC, isRear, isRecirculation, acOn,
-    radioOn, volume,
+    tempDriver, tempPassenger, fanLevel, isAuto, isMaxAC, isRear, isRecirculation,
+    volume,
     setTempDriver, setTempPassenger, setFanLevel,
     setAuto, setMaxAC, setRear, setRecirculation, setAcOn,
     setRadioOn, setVolume,
@@ -47,12 +47,12 @@ export function DashboardScreen() {
                 {/* Center: power knob (rotation = volume) */}
                 <View style={styles.centerColumn}>
                   <KnobButton
-                    onPress={() => setRadioOn(!radioOn)}
+                    onPress={() => setRadioOn(true)}
                     onIncrement={() => setVolume(Math.min(40, volume + 1))}
                     onDecrement={() => setVolume(Math.max(0, volume - 1))}
-                    active={radioOn}
+                    active={true}
                   >
-                    <Ionicons name="power" size={s(50)} color={radioOn ? '#CCCCCC' : '#444444'} />
+                    <Ionicons name="power" size={s(50)} color="#CCCCCC" />
                   </KnobButton>
                 </View>
 
@@ -109,12 +109,12 @@ export function DashboardScreen() {
                 {/* Center: fan knob (rotation = niveau ventilo) */}
                 <View style={styles.centerColumn}>
                   <KnobButton
-                    onPress={() => setAcOn(!acOn)}
+                    onPress={() => setAcOn(true)}
                     onIncrement={() => setFanLevel(Math.min(7, fanLevel + 1))}
                     onDecrement={() => setFanLevel(Math.max(0, fanLevel - 1))}
-                    active={acOn}
+                    active={true}
                   >
-                    <MaterialCommunityIcons name="fan" size={s(50)} color={acOn ? '#CCCCCC' : '#444444'} />
+                    <MaterialCommunityIcons name="fan" size={s(50)} color="#CCCCCC" />
                   </KnobButton>
                 </View>
 

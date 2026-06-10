@@ -115,8 +115,8 @@ export const useDashboardStore = create<DashboardState>((set) => ({
   setMaxAC: (_val) => { send('DEFROST'); },
   setRear: (_val) => { send('REAR:1'); },
   setRecirculation: (_val) => { send('RECIRC:1'); },
-  setAcOn: (val) => { set({ acOn: val }); send(`AC:${val ? 1 : 0}`); },
-  setRadioOn: (val) => { set({ radioOn: val }); if (val) send('RADIO:1'); },
+  setAcOn: (_val) => { send('FAN:ON'); },
+  setRadioOn: (_val) => { send('RADIO:1'); },
   setVolume: (vol) => {
     const prev = useDashboardStore.getState().volume;
     set({ volume: vol });
