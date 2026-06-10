@@ -10,6 +10,7 @@ import { WideButton } from '@/components/WideButton';
 import { BottomBar } from '@/components/BottomBar';
 import { SerialOverlay } from '@/components/SerialOverlay';
 import { useDashboardStore } from '@/store';
+import { serialService } from '@/services';
 
 export function DashboardScreen() {
   const [serialVisible, setSerialVisible] = useState(false);
@@ -40,8 +41,8 @@ export function DashboardScreen() {
 
                 {/* Left group: |<< and MODE */}
                 <View style={styles.buttonColumn}>
-                  <WideButton label="|<<" onPress={() => {}} width={hs(176)} height={vs(112)} />
-                  <WideButton label="MODE" onPress={() => {}} width={hs(176)} height={vs(96)} />
+                  <WideButton label="|<<" onPress={() => serialService.send('PREV')} active={true} width={hs(176)} height={vs(112)} />
+                  <WideButton label="MODE" onPress={() => serialService.send('MUSIC')} active={true} width={hs(176)} height={vs(96)} />
                 </View>
 
                 {/* Center: power knob (rotation = volume) */}
@@ -58,8 +59,8 @@ export function DashboardScreen() {
 
                 {/* Right group: >>| and AV */}
                 <View style={styles.buttonColumn}>
-                  <WideButton label=">>|" onPress={() => {}} width={hs(176)} height={vs(112)} />
-                  <WideButton label="AV" onPress={() => {}} width={hs(176)} height={vs(96)} />
+                  <WideButton label=">>|" onPress={() => serialService.send('NEXT')} active={true} width={hs(176)} height={vs(112)} />
+                  <WideButton label="AV" onPress={() => serialService.send('SRC')} active={true} width={hs(176)} height={vs(96)} />
                 </View>
               </View>
 

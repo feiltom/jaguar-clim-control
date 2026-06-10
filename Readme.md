@@ -8,9 +8,9 @@ Tablette Android embarquée dans une Jaguar XF, pilotant la climatisation et l'a
 
 | Composant | Détail |
 |-----------|--------|
-| Tablette Android | Samsung SM-T500 (1024×600) |
+| Autoradio Android | MT8163 (1024×600) |
 | Microcontrôleur | LILYGO T-CAN485 (ESP32 + SN65HVD230) |
-| Câble USB | USB-C ↔ USB-A (tablette → ESP32) |
+| Câble USB | USB-C ↔ USB-A (Autoradio → ESP32) |
 | Connexion CAN | 2 fils sur le connecteur MS-CAN de la Jaguar |
 
 ---

@@ -224,6 +224,7 @@ void handleCommand(const String& cmd) {
   // Radio
   if (cmd == "RADIO:1")  { pulse(3, 16);       Serial.println("OK"); return; }
   if (cmd == "SRC")      { pulse(3, 64);       Serial.println("OK"); return; }
+  if (cmd == "MUSIC")    { pulse(1, 16);       Serial.println("OK"); return; }
   if (cmd == "NEXT")     { pulse(4, 16);       Serial.println("OK"); return; }
   if (cmd == "PREV")     { pulse(4, 64);       Serial.println("OK"); return; }
   if (cmd == "VOL:UP")   { pulse(7, 128, 127); Serial.println("OK"); return; }
