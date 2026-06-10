@@ -1,6 +1,22 @@
 import { create } from 'zustand';
 import { serialService } from '@/services';
 
+function parseSerialMessage(line: string) {
+  const store = useDashboardStore.getState();
+  store.addSerialLog({ direction: 'RX', message: line, ts: Date.now() });
+
+  if (!line.startsWith('VAL:')) return;
+  const [, key, val] = line.split(':');
+  const on = val === '1';
+
+  switch (key) {
+    case 'AUTO':    store.setAutoFromSerial(on);    break;
+    case 'REAR_H':  store.setRearFromSerial(on);    break;
+    case 'RECIRC':  store.setRecircFromSerial(on);  break;
+    case 'DEFROST': store.setMaxACFromSerial(on);   break;
+  }
+}
+
 type ConnectionStatus = 'connected' | 'disconnected' | 'connecting';
 
 export type SerialLogEntry = {
@@ -49,6 +65,10 @@ interface DashboardState {
   setPlaying: (val: boolean) => void;
   setConnectionStatus: (status: ConnectionStatus) => void;
   addSerialLog: (entry: SerialLogEntry) => void;
+  setAutoFromSerial: (val: boolean) => void;
+  setRearFromSerial: (val: boolean) => void;
+  setRecircFromSerial: (val: boolean) => void;
+  setMaxACFromSerial: (val: boolean) => void;
 }
 
 const send = (cmd: string) => {
@@ -91,10 +111,10 @@ export const useDashboardStore = create<DashboardState>((set) => ({
     if (level === 0) send('FAN:ON');
     else send(level > prev ? 'FAN:UP' : 'FAN:DOWN');
   },
-  setAuto: (val) => { set({ isAuto: val }); send(`AUTO:${val ? 1 : 0}`); },
-  setMaxAC: (val) => { set({ isMaxAC: val }); send(`MAX:${val ? 1 : 0}`); },
-  setRear: (val) => { set({ isRear: val }); send(`REAR:${val ? 1 : 0}`); },
-  setRecirculation: (val) => { set({ isRecirculation: val }); send(`RECIRC:${val ? 1 : 0}`); },
+  setAuto: (_val) => { send('AUTO:1'); },
+  setMaxAC: (_val) => { send('DEFROST'); },
+  setRear: (_val) => { send('REAR:1'); },
+  setRecirculation: (_val) => { send('RECIRC:1'); },
   setAcOn: (val) => { set({ acOn: val }); send(`AC:${val ? 1 : 0}`); },
   setRadioOn: (val) => { set({ radioOn: val }); if (val) send('RADIO:1'); },
   setVolume: (vol) => {
@@ -112,4 +132,10 @@ export const useDashboardStore = create<DashboardState>((set) => ({
         ? [...s.serialLogs.slice(1), entry]
         : [...s.serialLogs, entry],
     })),
+  setAutoFromSerial:   (val) => set({ isAuto: val }),
+  setRearFromSerial:   (val) => set({ isRear: val }),
+  setRecircFromSerial: (val) => set({ isRecirculation: val }),
+  setMaxACFromSerial:  (val) => set({ isMaxAC: val }),
 }));
+
+serialService.onReceive(parseSerialMessage);

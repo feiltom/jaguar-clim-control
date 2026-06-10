@@ -6,6 +6,7 @@
  * Brochage :
  *   CAN TX  : GPIO 27 → transceiver SN65HVD230 intégré
  *   CAN RX  : GPIO 26 ← transceiver SN65HVD230 intégré
+ *   CAN SE  : GPIO 23 → LOW pour activer le TX
  *   CAN H/L : bornes à vis → bus MS-CAN Jaguar (125 kbps)
  *   USB-C   : tablette Android (CH9102F @ 115200 baud)
  *
@@ -19,6 +20,7 @@
  *   PING          → PONG
  *   STATE?        → VAL:STATE:<n> TXERR:<n> RXERR:<n>
  *   RECOVER       → récupération bus-off
+ *   CLIM?         → envoi forcé de l'état complet de la clim
  *
  *   TEMP:D:UP / TEMP:D:DOWN   — température conducteur
  *   TEMP:P:UP / TEMP:P:DOWN   — température passager
@@ -40,7 +42,6 @@
  *   VAL:FRONT_H:<0|1>
  *   VAL:REAR_H:<0|1>
  *   VAL:RECIRC:<0|1>
- *   GPIO:NEXT / GPIO:PREV  — commande volant détectée
  */
 
 #include <Arduino.h>
@@ -55,20 +56,6 @@ CRGB leds[LED_COUNT];
 void setLed(CRGB color) {
   leds[0] = color;
   FastLED.show();
-}
-
-// ─── GPIOs sortie commandes steering wheel ─────────────────────────────────
-#define GPIO_NEXT  32
-#define GPIO_PREV  33
-#define GPIO_PULSE_MS 240
-
-unsigned long nextOffAt = 0;
-unsigned long prevOffAt = 0;
-unsigned long ledOffAt  = 0;
-
-void triggerGpio(int pin, unsigned long& offAt) {
-  digitalWrite(pin, HIGH);
-  offAt = millis() + GPIO_PULSE_MS;
 }
 
 // ─── Pins T-CAN485 ─────────────────────────────────────────────────────────
@@ -108,6 +95,7 @@ void printClimState() {
 // ─── Buffer série ──────────────────────────────────────────────────────────
 char cmdBuffer[MAX_CMD_LEN];
 int  cmdIndex = 0;
+unsigned long ledOffAt = 0;
 
 // ─── Prototypes ────────────────────────────────────────────────────────────
 void handleCommand(const String& cmd);
@@ -119,8 +107,6 @@ void pulse(int byteIdx, uint8_t val, uint8_t offVal = 0);
 void setup() {
   Serial.begin(SERIAL_BAUD);
 
-  pinMode(GPIO_NEXT, OUTPUT); digitalWrite(GPIO_NEXT, LOW);
-  pinMode(GPIO_PREV, OUTPUT); digitalWrite(GPIO_PREV, LOW);
   pinMode(CAN_SE_PIN, OUTPUT); digitalWrite(CAN_SE_PIN, LOW);
 
   FastLED.addLeds<WS2812B, LED_PIN, GRB>(leds, LED_COUNT);
@@ -141,9 +127,7 @@ void setup() {
 // ─────────────────────────────────────────────────────────────────────────────
 void loop() {
   unsigned long now = millis();
-  if (nextOffAt && now >= nextOffAt) { digitalWrite(GPIO_NEXT, LOW); nextOffAt = 0; }
-  if (prevOffAt && now >= prevOffAt) { digitalWrite(GPIO_PREV, LOW); prevOffAt = 0; }
-  if (ledOffAt  && now >= ledOffAt)  { setLed(CRGB::Green);          ledOffAt  = 0; }
+  if (ledOffAt && now >= ledOffAt) { setLed(CRGB::Green); ledOffAt = 0; }
 
   while (Serial.available()) {
     char c = (char)Serial.read();
@@ -213,7 +197,7 @@ void pulse(int byteIdx, uint8_t val, uint8_t offVal) {
 void handleCommand(const String& cmd) {
   if (cmd == "PING")    { Serial.println("PONG"); return; }
   if (cmd == "RECOVER") { recoverBusOff(); return; }
-  if (cmd == "CLIM?")  { printClimState(); return; }
+  if (cmd == "CLIM?")   { printClimState(); return; }
   if (cmd == "STATE?") {
     twai_status_info_t s;
     twai_get_status_info(&s);
@@ -222,11 +206,11 @@ void handleCommand(const String& cmd) {
   }
 
   // Température conducteur
-  if (cmd == "TEMP:D:UP")   { pulse(5, 1);        Serial.println("OK"); return; }
-  if (cmd == "TEMP:D:DOWN") { pulse(5, 4);        Serial.println("OK"); return; }
+  if (cmd == "TEMP:D:UP")   { pulse(4, 1);        Serial.println("OK"); return; }
+  if (cmd == "TEMP:D:DOWN") { pulse(4, 4);        Serial.println("OK"); return; }
   // Température passager
-  if (cmd == "TEMP:P:UP")   { pulse(4, 1);        Serial.println("OK"); return; }
-  if (cmd == "TEMP:P:DOWN") { pulse(4, 4);        Serial.println("OK"); return; }
+  if (cmd == "TEMP:P:UP")   { pulse(5, 1);        Serial.println("OK"); return; }
+  if (cmd == "TEMP:P:DOWN") { pulse(5, 4);        Serial.println("OK"); return; }
   // Ventilation
   if (cmd == "FAN:UP")      { pulse(6, 128, 127); Serial.println("OK"); return; }
   if (cmd == "FAN:DOWN")    { pulse(6, 126, 127); Serial.println("OK"); return; }
@@ -250,12 +234,6 @@ void handleCommand(const String& cmd) {
 
 // ─────────────────────────────────────────────────────────────────────────────
 void handleCanRx(const twai_message_t& msg) {
-  // Commandes steering wheel reçues sur le bus (skipF/skipP byte[4])
-  if (msg.identifier == CAN_ID_OUT && msg.data_length_code >= 5) {
-    if (msg.data[4] & 16) { triggerGpio(GPIO_NEXT, nextOffAt); Serial.println("GPIO:NEXT"); }
-    if (msg.data[4] & 64) { triggerGpio(GPIO_PREV, prevOffAt); Serial.println("GPIO:PREV"); }
-  }
-
   if (msg.identifier == CAN_ID_CLIM && msg.data_length_code >= 5) {
     uint8_t stateAutoMode   = (msg.data[3] & 32)  ? 1 : 0;
     uint8_t stateDefrost    = (msg.data[3] & 64)  ? 1 : 0;

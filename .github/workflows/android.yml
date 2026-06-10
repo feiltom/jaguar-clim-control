@@ -1,0 +1,57 @@
+name: Android CI
+
+on:
+  push:
+    paths:
+      - 'android/**'
+      - '.github/workflows/android.yml'
+
+jobs:
+  build:
+    name: Build APK
+    runs-on: ubuntu-latest
+    container:
+      image: reactnativecommunity/react-native-android:latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Cache npm
+        uses: actions/cache@v4
+        with:
+          path: android/node_modules
+          key: ${{ runner.os }}-npm-${{ hashFiles('android/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-npm-
+
+      - name: Cache Gradle
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('android/android/**/*.gradle*') }}
+          restore-keys: ${{ runner.os }}-gradle-
+
+      - name: Install dependencies
+        run: cd android && npm install
+
+      - name: Bundle JS
+        run: |
+          cd android
+          node node_modules/.bin/react-native bundle \
+            --platform android \
+            --dev true \
+            --entry-file index.js \
+            --bundle-output android/app/src/main/assets/index.android.bundle \
+            --assets-dest android/app/src/main/res
+
+      - name: Build APK
+        run: |
+          cd android/android
+          ./gradlew assembleDebug -PNODE_BINARY=$(which node)
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-debug.apk
+          path: android/android/app/build/outputs/apk/debug/app-debug.apk
