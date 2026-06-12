@@ -33,6 +33,7 @@
  *
  *   RADIO:1        — marche/arrêt radio (toggle)
  *   SRC            — changement de source
+ *   MUSIC          — mode musique
  *   NEXT / PREV    — piste suivante / précédente
  *   VOL:UP / VOL:DOWN — volume
  *

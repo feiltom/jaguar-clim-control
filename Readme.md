@@ -22,8 +22,6 @@ Tablette Android embarquée dans une Jaguar XF, pilotant la climatisation et l'a
 | 27 | CAN TX → transceiver SN65HVD230 |
 | 26 | CAN RX ← transceiver SN65HVD230 |
 | 23 | CAN SE (standby — doit être LOW pour activer le TX) |
-| 32 | Sortie GPIO NEXT (bouton volant suivant) |
-| 33 | Sortie GPIO PREV (bouton volant précédent) |
 | 4  | LED RGB WS2812B |
 
 ### LED d'état
@@ -91,6 +89,7 @@ pio run --target upload
 |----------|--------|
 | `RADIO:1` | Marche/arrêt (toggle) |
 | `SRC` | Changement de source |
+| `MUSIC` | Mode musique |
 | `NEXT` / `PREV` | Piste suivante / précédente |
 | `VOL:UP` / `VOL:DOWN` | Volume |
 
@@ -101,7 +100,6 @@ VAL:DEFROST:<0|1>
 VAL:FRONT_H:<0|1>
 VAL:REAR_H:<0|1>
 VAL:RECIRC:<0|1>
-GPIO:NEXT / GPIO:PREV   ← commande volant détectée
 ```
 
 ---
