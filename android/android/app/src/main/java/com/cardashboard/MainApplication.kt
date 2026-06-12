@@ -16,7 +16,7 @@ class MainApplication : Application(), ReactApplication {
         PackageList(this).packages.apply {
           add(LaunchPackage())
         },
-      useDeveloperSupport = false,
+      useDevSupport = false,
     )
   }
 
