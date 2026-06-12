@@ -4,6 +4,10 @@ Tablette Android embarquée dans une Jaguar XF, pilotant la climatisation et l'a
 
 Inspiré du travail de [rhysmorgan134/jaguar-xf-canbus-app](https://github.com/rhysmorgan134/jaguar-xf-canbus-app).
 
+
+https://github.com/user-attachments/assets/f17ff673-f6cd-4a0b-aabd-f753df7b7be5
+
+
 ---
 
 ## Matériel requis
