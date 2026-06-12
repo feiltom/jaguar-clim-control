@@ -2,6 +2,8 @@
 
 Tablette Android embarquée dans une Jaguar XF, pilotant la climatisation et l'autoradio via le bus CAN MS-CAN (125 kbps) grâce à un ESP32 LILYGO T-CAN485 connecté en USB.
 
+Inspiré du travail de [rhysmorgan134/jaguar-xf-canbus-app](https://github.com/rhysmorgan134/jaguar-xf-canbus-app).
+
 ---
 
 ## Matériel requis
@@ -40,12 +42,6 @@ Tablette Android embarquée dans une Jaguar XF, pilotant la climatisation et l'a
 - Bus MS-CAN : 125 kbps
 - CAN ID de sortie : `0x2C8`
 - CAN ID état clim : `0x208`
-
----
-
-## Câblage autoradio
-
-> 📷 *Photo du câblage à venir*
 
 ---
 
