@@ -30,7 +30,7 @@ export default function App() {
     const subscription = AppState.addEventListener('change', (nextState) => {
       const wasBackground = appState.current.match(/inactive|background/);
       appState.current = nextState;
-      if (wasBackground && nextState === 'active' && !serialService.isConnected()) {
+      if (wasBackground && nextState === 'active') {
         serialService.disconnect();
         tryConnect();
       }

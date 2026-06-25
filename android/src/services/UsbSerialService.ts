@@ -55,7 +55,11 @@ export class UsbSerialService implements SerialService {
   }
 
   disconnect(): void {
-    this.port?.close();
+    try {
+      this.port?.close();
+    } catch {
+      // port already broken after sleep, ignore
+    }
     this.port = null;
     this.connected = false;
     this.connectionCallback?.(false);
@@ -63,7 +67,12 @@ export class UsbSerialService implements SerialService {
 
   send(command: string): void {
     if (!this.port) return;
-    this.port.send(toHex(`${command}\n`)).catch(console.error);
+    this.port.send(toHex(`${command}\n`)).catch((err) => {
+      console.error(err);
+      this.port = null;
+      this.connected = false;
+      this.connectionCallback?.(false);
+    });
   }
 
   onReceive(callback: (data: string) => void): void {
